@@ -4,7 +4,7 @@
 // dan copy().
 
 interface Payable {
-    fun calculateSalary(): Double
+    abstract fun calculateSalary(): Double
 }
 
 data class Employee(val name: String, val baseSalary: Double, val bonus: Double) : Payable {
