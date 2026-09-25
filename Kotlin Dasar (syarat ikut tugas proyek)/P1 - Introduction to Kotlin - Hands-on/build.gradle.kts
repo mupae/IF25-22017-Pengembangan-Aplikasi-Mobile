@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.24" apply false
+    kotlin("jvm") version "2.1.0" apply false
 }
 
 subprojects {
@@ -7,5 +7,11 @@ subprojects {
 
     repositories {
         mavenCentral()
+    }
+
+    configure<JavaPluginExtension> {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(21))
+        }
     }
 }

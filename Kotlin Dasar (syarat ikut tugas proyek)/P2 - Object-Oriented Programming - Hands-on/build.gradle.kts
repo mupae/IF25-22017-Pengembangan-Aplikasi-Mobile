@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.24" apply false
+    kotlin("jvm") version "2.1.10" apply false
 }
 
 subprojects {
@@ -7,5 +7,9 @@ subprojects {
 
     repositories {
         mavenCentral()
+    }
+
+    configure<org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension> {
+        jvmToolchain(21)
     }
 }
